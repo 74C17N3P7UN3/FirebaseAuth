@@ -16,7 +16,7 @@ const App = () => (
                </Routes>
             </BrowserRouter>
          </div>
-      </Container >
+      </Container>
    </AuthProvider>
 )
 
