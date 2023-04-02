@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap'
 
 import { AuthProvider } from './contexts/AuthContext'
 import { Dashboard, Login, Signup } from './components'
+import { PrivateRoute, PublicRoute } from './routes'
 
 const App = () => (
    <AuthProvider>
@@ -10,9 +11,15 @@ const App = () => (
          <div className='w-100' style={{ maxWidth: '400px' }}>
             <BrowserRouter>
                <Routes>
-                  <Route exact path='/' Component={Dashboard} />
-                  <Route path='/login' Component={Login} />
-                  <Route path='/signup' Component={Signup} />
+                  <Route exact path='/' element={
+                     <PrivateRoute Component={Dashboard} />
+                  } />
+                  <Route path='/login' element={
+                     <PublicRoute Component={Login} />
+                  } />
+                  <Route path='/signup' element={
+                     <PublicRoute Component={Signup} />
+                  } />
                </Routes>
             </BrowserRouter>
          </div>
