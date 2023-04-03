@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Container } from 'react-bootstrap'
 
 import { AuthProvider } from './contexts/AuthContext'
-import { Dashboard, Login, Signup } from './components'
+import { Dashboard, ForgotPassword, Login, Signup } from './components'
 import { PrivateRoute, PublicRoute } from './routes'
 
 const App = () => (
@@ -19,6 +19,9 @@ const App = () => (
                   } />
                   <Route path='/signup' element={
                      <PublicRoute Component={Signup} />
+                  } />
+                  <Route path='/forgot-password' element={
+                     <PublicRoute Component={ForgotPassword} />
                   } />
                </Routes>
             </BrowserRouter>
