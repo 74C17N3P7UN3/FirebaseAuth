@@ -8,6 +8,7 @@ import {
    ForgotPassword,
    Login,
    Signup,
+   UpdateProfile,
 } from './components'
 
 const App = () => (
@@ -27,6 +28,9 @@ const App = () => (
                   } />
                   <Route path='/forgot-password' element={
                      <PublicRoute Component={ForgotPassword} />
+                  } />
+                  <Route path='/update-profile' element={
+                     <PrivateRoute Component={UpdateProfile} />
                   } />
                </Routes>
             </BrowserRouter>
