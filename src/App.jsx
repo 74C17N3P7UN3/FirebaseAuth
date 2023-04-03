@@ -2,8 +2,13 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Container } from 'react-bootstrap'
 
 import { AuthProvider } from './contexts/AuthContext'
-import { Dashboard, ForgotPassword, Login, Signup } from './components'
 import { PrivateRoute, PublicRoute } from './routes'
+import {
+   Dashboard,
+   ForgotPassword,
+   Login,
+   Signup,
+} from './components'
 
 const App = () => (
    <AuthProvider>
