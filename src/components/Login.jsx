@@ -37,18 +37,20 @@ const Login = () => {
                {error && (<Alert variant='danger'>{error}</Alert>)}
                <Form onSubmit={handleSubmit}>
                   <Form.Group id='email'>
-                     <Form.Label>Email</Form.Label>
+                     <Form.Label htmlFor='email-input'>Email</Form.Label>
                      <Form.Control
                         type='email'
+                        id='email-input'
                         ref={emailRef}
                         required
                         className='mb-3'
                      />
                   </Form.Group>
                   <Form.Group id='password'>
-                     <Form.Label>Password</Form.Label>
+                     <Form.Label htmlFor='password-input'>Password</Form.Label>
                      <Form.Control
                         type='password'
+                        id='password-input'
                         ref={passwordRef}
                         required
                         className='mb-3'

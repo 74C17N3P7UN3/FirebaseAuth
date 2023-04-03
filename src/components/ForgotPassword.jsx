@@ -38,10 +38,22 @@ const ForgotPassword = () => {
                {message && (<Alert variant='success'>{message}</Alert>)}
                <Form onSubmit={handleSubmit}>
                   <Form.Group id='email'>
-                     <Form.Label>Email</Form.Label>
-                     <Form.Control type='email' ref={emailRef} required className='mb-3' />
+                     <Form.Label htmlFor='email-input'>Email</Form.Label>
+                     <Form.Control
+                        type='email'
+                        id='email-input'
+                        ref={emailRef}
+                        required
+                        className='mb-3'
+                     />
                   </Form.Group>
-                  <Button type='submit' className='w-100' disabled={loading}>Reset Password</Button>
+                  <Button
+                     type='submit'
+                     disabled={loading}
+                     className='w-100'
+                  >
+                     Reset Password
+                  </Button>
                </Form>
                <div className='w-100 text-center mt-3'>
                   <Link to='/login'>Log In</Link>

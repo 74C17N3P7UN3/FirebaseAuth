@@ -54,9 +54,10 @@ const UpdateProfile = () => {
                {!loading && !error && message && (<Alert variant='success'>{message}</Alert>)}
                <Form onSubmit={handleSubmit}>
                   <Form.Group id='email'>
-                     <Form.Label>Email</Form.Label>
+                     <Form.Label htmlFor='email-input'>Email</Form.Label>
                      <Form.Control
                         type='email'
+                        id='email-input'
                         ref={emailRef}
                         defaultValue={currentUser.email}
                         required
@@ -64,18 +65,20 @@ const UpdateProfile = () => {
                      />
                   </Form.Group>
                   <Form.Group id='password'>
-                     <Form.Label>Password</Form.Label>
+                     <Form.Label htmlFor='password-input'>Password</Form.Label>
                      <Form.Control
                         type='password'
+                        id='password-input'
                         ref={passwordRef}
                         placeholder='Leave blank to keep the same'
                         className='mb-3'
                      />
                   </Form.Group>
                   <Form.Group id='password-confirm'>
-                     <Form.Label>Password Confirmation</Form.Label>
+                     <Form.Label htmlFor='password-conf-input'>Password Confirmation</Form.Label>
                      <Form.Control
                         type='password'
+                        id='password-conf-input'
                         ref={passwordConfirmRef}
                         placeholder='Leave blank to keep the same'
                         className='mb-3'
